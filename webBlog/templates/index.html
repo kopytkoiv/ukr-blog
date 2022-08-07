@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UkraineBlog</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+</head>
+
+<body>
+    <section class="showcase">
+        <header>
+            <h2 class="logo"><span class="logoBlue">Ukraine</span><span class="logoYellow">Blog</span></h2>
+            <div class="toggle"></div>
+        </header>
+        <video src="{{ url_for('static', filename='css/videos/ukr.mp4')}}" muted loop autoplay></video>
+        <div class="overlay"></div>
+        <div class="text">
+            <h2>Welcome</h2>
+            <h3>Ukraine is in my heart</h3>
+            <p>
+                "Love our Ukraine in your dreams and awake"
+            </p>
+            <a href="/login">Sign In</a>
+        </div>
+        <ul class="social">
+            <li><a href="#"><img src="https://i.ibb.co/x7P24fL/facebook.png"></a></li>
+            <li><a href="#"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png"></a></li>
+            <li><a href="#"><img src="https://i.ibb.co/ySwtH4B/instagram.png"></a></li>
+        </ul>
+    </section>
+    <div class="menu">
+        <ul>
+            <li><a href="/home">Blog</a></li>
+            <li><a href="/login">Sign In</a></li>
+            <li><a href="/register">Register</a></li>
+        </ul>
+    </div>
+    <script>
+        const menuToggle = document.querySelector(".toggle");
+        const showcase = document.querySelector(".showcase");
+
+        menuToggle.addEventListener("click", () => {
+            menuToggle.classList.toggle("active");
+            showcase.classList.toggle("active");
+        });
+    </script>
+</body>
+
+</html>
